@@ -1,0 +1,12 @@
+---
+- name: mount nfs from lenovo
+  hosts: localhost
+  vars:
+  - lenovo_ip: 192.168.1.103
+  tasks:
+  - name: mount nfs  from lenovo
+    mount:
+      path: /nfsdata
+      src: 192.168.1.103:/
+      state: mounted
+      fstype: nfs
